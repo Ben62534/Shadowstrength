@@ -854,9 +854,14 @@ main {
     padding-inline: 16px;
   }
 
+@media (max-width: 768px) {
   .nav-links {
-    display: none; /* Simple mobile: hide nav links (could add burger later) */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
   }
+}
 
   main {
     padding-top: 70px;
