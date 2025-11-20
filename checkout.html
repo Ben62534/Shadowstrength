@@ -1,1 +1,157 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shadow Strength | Checkout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <div class="logo-badge">SS</div>
+        <span>Shadow Strength</span>
+      </a>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us &amp; Reviews</a>
+      <a href="design-submissions.html">Design Submissions</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <button class="cart-button" id="openCartBtn">
+      <span class="cart-icon">🛒</span>
+      <span class="cart-badge" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <div class="cart-overlay" id="cartOverlay">
+    <div class="cart-panel">
+      <div class="cart-header">
+        <h2>Shopping Cart</h2>
+        <button class="icon-button" id="closeCartBtn">✕</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span>Total:</span>
+          <span id="cartTotal">$0.00</span>
+        </div>
+        <a href="checkout.html" class="primary-btn full-width">Proceed to Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="page-main">
+    <section class="section">
+      <a href="shop.html" class="back-link">← Back to Cart</a>
+      <h1 class="section-title">Checkout</h1>
+
+      <!-- Step indicator -->
+      <div class="checkout-steps">
+        <div class="step active">
+          <div class="step-icon">📍</div>
+          <span>Delivery</span>
+        </div>
+        <div class="step">
+          <div class="step-icon">💳</div>
+          <span>Payment</span>
+        </div>
+      </div>
+
+      <!-- Delivery form -->
+      <form class="form-card" id="checkoutForm">
+        <h2 class="form-title">Delivery Information</h2>
+        <div class="grid-2">
+          <div class="form-row">
+            <label for="fullName">Full Name</label>
+            <input id="fullName" name="fullName" type="text" required />
+          </div>
+          <div class="form-row">
+            <label for="checkoutEmail">Email Address</label>
+            <input id="checkoutEmail" name="email" type="email" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="street">Street Address</label>
+          <input id="street" name="street" type="text" required />
+        </div>
+
+        <div class="grid-3">
+          <div class="form-row">
+            <label for="city">City</label>
+            <input id="city" name="city" type="text" required />
+          </div>
+          <div class="form-row">
+            <label for="state">State</label>
+            <input id="state" name="state" type="text" required />
+          </div>
+          <div class="form-row">
+            <label for="zip">ZIP Code</label>
+            <input id="zip" name="zip" type="text" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone Number</label>
+          <input id="phone" name="phone" type="tel" required />
+        </div>
+
+        <button type="button" id="toPayment" class="primary-btn full-width">Continue to Payment</button>
+      </form>
+
+      <!-- Payment form -->
+      <form class="form-card hidden" id="paymentForm">
+        <h2 class="form-title">Payment Details</h2>
+
+        <div class="form-row">
+          <label for="cardName">Name on Card</label>
+          <input id="cardName" type="text" required />
+        </div>
+        <div class="form-row">
+          <label for="cardNumber">Card Number</label>
+          <input id="cardNumber" type="text" maxlength="19" placeholder="0000 0000 0000 0000" required />
+        </div>
+
+        <div class="grid-3">
+          <div class="form-row">
+            <label for="expMonth">Exp. Month</label>
+            <input id="expMonth" type="text" placeholder="MM" required />
+          </div>
+          <div class="form-row">
+            <label for="expYear">Exp. Year</label>
+            <input id="expYear" type="text" placeholder="YY" required />
+          </div>
+          <div class="form-row">
+            <label for="cvv">CVV</label>
+            <input id="cvv" type="password" maxlength="4" required />
+          </div>
+        </div>
+
+        <div class="checkout-summary">
+          <h3>Order Summary</h3>
+          <p><span>Items Total:</span> <span id="summaryItemsTotal">$0.00</span></p>
+          <p><span>Shipping:</span> <span>$0.00</span></p>
+          <p class="summary-total"><span>Order Total:</span> <span id="summaryOrderTotal">$0.00</span></p>
+        </div>
+
+        <button type="submit" class="primary-btn full-width">Place Order</button>
+        <p class="form-note">* Demo only – no real payments are processed.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Shadow Strength. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
