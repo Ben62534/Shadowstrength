@@ -1,1 +1,181 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shadow Strength | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <div class="logo-badge">SS</div>
+        <span>Shadow Strength</span>
+      </a>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us &amp; Reviews</a>
+      <a href="design-submissions.html">Design Submissions</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <button class="cart-button" id="openCartBtn">
+      <span class="cart-icon">🛒</span>
+      <span class="cart-badge" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <!-- CART OVERLAY (shared on all pages) -->
+  <div class="cart-overlay" id="cartOverlay">
+    <div class="cart-panel">
+      <div class="cart-header">
+        <h2>Shopping Cart</h2>
+        <button class="icon-button" id="closeCartBtn">✕</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span>Total:</span>
+          <span id="cartTotal">$0.00</span>
+        </div>
+        <a href="checkout.html" class="primary-btn full-width">Proceed to Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-logo">
+        <div class="logo-square">SS</div>
+      </div>
+      <h1 class="hero-title">SHADOW<br>STRENGTH</h1>
+      <p class="hero-subtitle">For the community, built by the community.</p>
+      <a href="shop.html" class="primary-btn hero-btn">Shop Now →</a>
+      <div class="scroll-indicator">⌄</div>
+    </section>
+
+    <!-- WHAT WE STAND FOR -->
+    <section class="section">
+      <h2 class="section-title">What We Stand For</h2>
+      <div class="grid-4">
+        <div class="info-card">
+          <h3>Community First</h3>
+          <p>Every design, every product, voted on by you.</p>
+        </div>
+        <div class="info-card">
+          <h3>Built Together</h3>
+          <p>Submit your designs and see them come to life.</p>
+        </div>
+        <div class="info-card">
+          <h3>Give Back</h3>
+          <p>Profits invested in underdeveloped communities.</p>
+        </div>
+        <div class="info-card">
+          <h3>Premium Quality</h3>
+          <p>High-performance gear that lasts.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED COLLECTION -->
+    <section class="section">
+      <h2 class="section-title">Featured Collection</h2>
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-image placeholder-img">Power Hoodie</div>
+          <div class="product-info">
+            <h3>Power Hoodie</h3>
+            <p class="price">$54.99</p>
+            <button class="secondary-btn add-to-cart"
+                    data-id="power-hoodie"
+                    data-name="Power Hoodie"
+                    data-price="54.99">
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image placeholder-img">Elite Training Shorts</div>
+          <div class="product-info">
+            <h3>Elite Training Shorts</h3>
+            <p class="price">$39.99</p>
+            <button class="secondary-btn add-to-cart"
+                    data-id="elite-training-shorts"
+                    data-name="Elite Training Shorts"
+                    data-price="39.99">
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image placeholder-img">Community Crew Tee</div>
+          <div class="product-info">
+            <h3>Community Crew Tee</h3>
+            <p class="price">$29.99</p>
+            <button class="secondary-btn add-to-cart"
+                    data-id="community-crew-tee"
+                    data-name="Community Crew Tee"
+                    data-price="29.99">
+              Add to Cart
+            </button>
+          </div>
+        </article>
+      </div>
+      <div class="center">
+        <a href="shop.html" class="primary-btn">View All Products</a>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="section impact-section">
+      <h2 class="section-title">Your Purchase Makes a Difference</h2>
+      <p class="section-subtitle">
+        Every product you buy helps fund health and fitness facilities in underdeveloped communities.
+        Together, we're building strength beyond the gym.
+      </p>
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Communities Supported</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Designs Submitted</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">$50K+</span>
+          <span class="stat-label">Reinvested Locally</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOIN MOVEMENT -->
+    <section class="section join-section">
+      <h2 class="section-title">Join the Movement</h2>
+      <p class="section-subtitle">
+        Be part of a community that creates, contributes, and gives back.
+      </p>
+      <div class="button-row">
+        <a href="design-submissions.html" class="primary-btn">Submit Your Design</a>
+        <a href="about.html" class="outline-btn">Learn Our Story</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Shadow Strength. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
