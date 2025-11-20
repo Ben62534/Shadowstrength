@@ -8,6 +8,7 @@
 // CART STORAGE
 // -------------------------------
 const CART_KEY = "shadowstrength_cart";
+const COOKIE_KEY = "shadowstrength_cookie_consent";
 
 function loadCart() {
   try {
