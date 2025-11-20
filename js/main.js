@@ -254,14 +254,20 @@ function setupDemoForms() {
 }
 
 // -------------------------------
-// COOKIE / DATA CONSENT BANNER
+// YEAR FOOTER AUTO UPDATE
 // -------------------------------
+function updateYear() {
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
+}
+
+/* COOKIE / DATA CONSENT BANNER */
 function setupCookieBanner() {
   const banner = document.getElementById("cookieBanner");
   if (!banner) return;
 
+  // If user already made a choice, hide the banner
   const stored = localStorage.getItem(COOKIE_KEY);
-  // If user has already chosen, hide banner
   if (stored === "accepted" || stored === "rejected") {
     banner.classList.add("hidden-cookie");
     return;
@@ -270,6 +276,7 @@ function setupCookieBanner() {
   const acceptBtn = document.getElementById("cookieAccept");
   const rejectBtn = document.getElementById("cookieReject");
 
+  // Slide banner up into view
   banner.classList.add("visible");
 
   if (acceptBtn) {
@@ -277,9 +284,7 @@ function setupCookieBanner() {
       localStorage.setItem(COOKIE_KEY, "accepted");
       banner.classList.remove("visible");
       banner.classList.add("hidden-cookie");
-
-      // In a real site, you would initialise analytics / tracking here
-      // if (typeof initAnalytics === "function") initAnalytics();
+      // In a real app, you would load analytics / tracking here.
     });
   }
 
@@ -288,18 +293,11 @@ function setupCookieBanner() {
       localStorage.setItem(COOKIE_KEY, "rejected");
       banner.classList.remove("visible");
       banner.classList.add("hidden-cookie");
-      // We simply don't load any non-essential scripts.
+      // We simply don't load any non-essential stuff.
     });
   }
 }
 
-// -------------------------------
-// YEAR FOOTER AUTO UPDATE
-// -------------------------------
-function updateYear() {
-  const year = document.getElementById("year");
-  if (year) year.textContent = new Date().getFullYear();
-}
 
 // -------------------------------
 // INITIALIZE EVERYTHING
