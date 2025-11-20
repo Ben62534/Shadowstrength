@@ -310,6 +310,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupFilters();
   setupCheckout();
   setupDemoForms();
+  setupCookieBanner();
 
   // Add-to-cart buttons
   document.addEventListener("click", e => {
