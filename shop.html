@@ -1,1 +1,136 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shadow Strength | Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <div class="logo-badge">SS</div>
+        <span>Shadow Strength</span>
+      </a>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us &amp; Reviews</a>
+      <a href="design-submissions.html">Design Submissions</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <button class="cart-button" id="openCartBtn">
+      <span class="cart-icon">🛒</span>
+      <span class="cart-badge" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <div class="cart-overlay" id="cartOverlay">
+    <div class="cart-panel">
+      <div class="cart-header">
+        <h2>Shopping Cart</h2>
+        <button class="icon-button" id="closeCartBtn">✕</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span>Total:</span>
+          <span id="cartTotal">$0.00</span>
+        </div>
+        <a href="checkout.html" class="primary-btn full-width">Proceed to Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="page-main">
+    <section class="section">
+      <h1 class="section-title">Our Collection</h1>
+
+      <div class="filter-row">
+        <button class="chip active" data-filter="all">All Products</button>
+        <button class="chip" data-filter="mens">Men's</button>
+        <button class="chip" data-filter="womens">Women's</button>
+        <button class="chip" data-filter="unisex">Unisex</button>
+      </div>
+
+      <div class="product-grid" id="shopGrid">
+        <!-- Shadow Tank Pro -->
+        <article class="product-card" data-category="mens">
+          <div class="product-image placeholder-img">Shadow Tank Pro</div>
+          <div class="product-info">
+            <span class="product-tag">Men's</span>
+            <h3>Shadow Tank Pro</h3>
+            <p class="price">$34.99</p>
+            <button class="secondary-btn add-to-cart"
+                    data-id="shadow-tank-pro"
+                    data-name="Shadow Tank Pro"
+                    data-price="34.99">
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <!-- Strength Flex Leggings -->
+        <article class="product-card" data-category="womens">
+          <div class="product-image placeholder-img">Strength Flex Leggings</div>
+          <div class="product-info">
+            <span class="product-tag">Women's</span>
+            <h3>Strength Flex Leggings</h3>
+            <p class="price">$44.99</p>
+            <button class="secondary-btn add-to-cart"
+                    data-id="strength-flex-leggings"
+                    data-name="Strength Flex Leggings"
+                    data-price="44.99">
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <!-- Community Crew Tee -->
+        <article class="product-card" data-category="unisex">
+          <div class="product-image placeholder-img">Community Crew Tee</div>
+          <div class="product-info">
+            <span class="product-tag">Unisex</span>
+            <h3>Community Crew Tee</h3>
+            <p class="price">$29.99</p>
+            <button class="secondary-btn add-to-cart"
+                    data-id="community-crew-tee"
+                    data-name="Community Crew Tee"
+                    data-price="29.99">
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <!-- Power Hoodie -->
+        <article class="product-card" data-category="unisex">
+          <div class="product-image placeholder-img">Power Hoodie</div>
+          <div class="product-info">
+            <span class="product-tag">Unisex</span>
+            <h3>Power Hoodie</h3>
+            <p class="price">$54.99</p>
+            <button class="secondary-btn add-to-cart"
+                    data-id="power-hoodie"
+                    data-name="Power Hoodie"
+                    data-price="54.99">
+              Add to Cart
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Shadow Strength. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
